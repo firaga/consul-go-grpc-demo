@@ -33,7 +33,7 @@ import (
 )
 
 const (
-	port = ":50051"
+	port = ":50052"
 )
 
 // server is used to implement helloworld.GreeterServer.
@@ -49,8 +49,8 @@ func RegisterToConsul() {
 	consul.RegitserService("127.0.0.1:8500", &consul.ConsulService{
 		Name: "helloworld",
 		Tag:  []string{"helloworld"},
-		IP:   "127.0.0.1",
-		Port: 50051,
+		IP:   "10.0.32.193",
+		Port: 50052,
 	})
 }
 
